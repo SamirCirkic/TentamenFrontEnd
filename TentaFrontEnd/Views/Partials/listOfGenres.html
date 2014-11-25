@@ -1,0 +1,29 @@
+﻿<div class="col-md-6">
+    <br/>
+    <br/>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th></th>
+        </tr>
+        <tr data-ng-repeat="g in genres">
+            <td>{{g.GenreId}}</td>
+            <td>{{g.Name}}</td>
+            <td>
+                <a class="btn btn-success" href="#/edit/{{g.GenreId}}">Editera</a>
+                <button class="btn btn-danger" data-ng-click="deleteGenre(g.GenreId)">Ta Bort</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="col-md-6">
+    <br/>
+    <br/>
+        <h1>Skapa Ny</h1>
+        <hr/>
+        <input class="form-control" type="text" data-ng-model="genre.Name" placeholder="Genres Namn" />
+        <br />
+        <br />
+        <button class="btn btn-info" data-ng-click="createNewGenre(genre)">Skapa Ny Genre</button>
+</div>
